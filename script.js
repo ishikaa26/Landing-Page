@@ -1,4 +1,3 @@
-
     const navbar = document.getElementById('navbar');
     const links = document.querySelectorAll("nav ul li a");
     const hamburger = document.getElementById("hamburger");
@@ -34,4 +33,5 @@
       menu.classList.toggle("active");
       hamburger.classList.toggle("open");
     });
+
   
