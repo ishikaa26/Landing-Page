@@ -1,0 +1,160 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+  
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    nav .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+  
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #fff;
+      color: #111;
+    }
+
+  
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+    }
+    .hamburger div {
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+  
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 30px;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        transition: right 0.3s ease;
+      }
+
+      nav ul.active {
+        right: 20px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+  
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    section .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #fff;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    section .btn:hover {
+      background: #ddd;
+    }
+
+    #home {
+      background: linear-gradient(to right, #4a90e2, #007aff);
+    }
+
+    #about {
+      background: linear-gradient(to right, #50c878, #28a745);
+    }
+
+    #services {
+      background: linear-gradient(to right, #f39c12, #e67e22);
+    }
+
+    #contact {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+    }
+
+  
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
